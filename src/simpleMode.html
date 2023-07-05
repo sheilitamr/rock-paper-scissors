@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Simple Mode</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="counter">
+        <p class="counter__text">You</p>
+        <p id="user-score" class="counter__points">0</p>
+      </div>
+      <img src="assets/images/logo.svg" class="header__img" alt="logo title" />
+
+      <div class="counter">
+        <p class="counter__text">Pc</p>
+        <p id="pc-score" class="counter__points">0</p>
+      </div>
+    </header>
+
+    <div id="game-container" class="game-container">
+      <img src="assets/images/bg-triangle.svg" alt="triangle" />
+      
+      <div class="image-container image-container__paper" data-element="paper">
+        <img
+          src="assets/images/icon-paper.svg"
+          class="game-container__image"
+          alt="icon paper simple"
+        />
+      </div>
+
+      <div
+        class="image-container image-container__scissors"
+        data-element="scissors"
+      >
+        <img
+          src="assets/images/icon-scissors.svg"
+          class="game-container__image"
+          alt="icon scissors simple"
+        />
+      </div>
+
+      <div class="image-container image-container__rock" data-element="rock">
+        <img
+          src="assets/images/icon-rock.svg"
+          class="game-container__image"
+          alt="icon rock simple"
+        />
+      </div>
+    </div>
+
+    <div id="result-container" class="result-container hidden">
+      <img id="user-picked-image" class="user-picked" src></img>
+      <div id="result" class="result">
+        <img src="assets/images/bg-triangle.svg" alt="">
+        <p id="result-text" class="result__text"></p>
+        <button id="button" class="result__button">Play Again</button>
+      </div>
+      <img id="pc-picked-image" class="pc-picked"/>
+     
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

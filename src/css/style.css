@@ -3,6 +3,11 @@
 *::before {
   box-sizing: border-box;
 }
+:root {
+  --color-paper: #4664f4;
+  --color-scissors: #eb9f0e;
+  --color-rock: #db2e4d;
+}
 
 img {
   max-width: 100%;
@@ -23,5 +28,69 @@ a {
 
 body {
   margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f3757;
+}
+
+.game-container {
+  position: relative;
+  width: 476px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding: 39px;
+  transition: transform 0.4s;
+}
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.game-container__image {
+  position: absolute;
+  width: 90px;
+  pointer-events: none;
+}
+.image-container__paper {
+  top: 0;
+  left: 20px;
+  border: 20px solid var(--color-paper);
+}
+.image-container__scissors {
+  top: 0;
+  left: 300px;
+  border: 20px solid var(--color-scissors);
+}
+.image-container__rock {
+  bottom: 0;
+  left: 160px;
+  border: 20px solid var(--color-rock);
+}
+
+.counter__text,
+.counter__points {
+  color: #fff;
+}
+
+.counter__points {
+  font-size: 64px;
+}
+
+.hidden {
+  display: none;
 }
